@@ -19,7 +19,7 @@
 
         <script>
         function getPrediction() {
-            fetch('https://comp258_gp3.messyplayground.com/predict')
+            fetch('https://127.0.0.1:5000/predict')
             .then(response => response.json())
             .then(data => {
                 console.log('Prediction:', data);
