@@ -6,12 +6,27 @@
     <body>
         <h1>Model testing</h1>
         <script>
-            async function loadModel() {
-                const model = await tf.loadLayersModel('./model.json');
-                // Use the model for something
-                console.log("loaded");
-            }
-            loadModel().catch(console.error);
+            // async function loadModel() {
+            //     const model = await tf.loadLayersModel('./model.json');
+            //     // Use the model for something
+            //     console.log("loaded");
+            // }
+            // loadModel().catch(console.error);
+        </script>
+
+        
+        <button onclick="getPrediction()">Get Prediction</button>
+
+        <script>
+        function getPrediction() {
+            fetch('http://yourserver.com/predict')
+            .then(response => response.json())
+            .then(data => {
+                console.log('Prediction:', data);
+                // Display the prediction on your web page
+            })
+            .catch(error => console.error('Error:', error));
+        }
         </script>
     </body>
 </html>
