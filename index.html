@@ -9,6 +9,7 @@
             async function loadModel() {
                 const model = await tf.loadLayersModel('./model.json');
                 // Use the model for something
+                console.log("loaded");
             }
             loadModel();
         </script>
