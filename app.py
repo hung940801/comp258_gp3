@@ -2,12 +2,12 @@ import pandas as pd
 import numpy as np
 
 #########
-# from OpenSSL import SSL
+from OpenSSL import SSL
 
-# context = SSL.Context(SSL.TLSv1_2_METHOD)
-# context.use_privatekey_file('/etc/letsencrypt/live/messyplayground.com/privkey.pem')
-# context.use_certificate_chain_file('/etc/letsencrypt/live/messyplayground.com/fullchain.pem')
-# context.use_certificate_file('/etc/letsencrypt/live/messyplayground.com/cert.pem')
+context = SSL.Context(SSL.TLSv1_2_METHOD)
+context.use_privatekey_file('/etc/letsencrypt/live/messyplayground.com/privkey.pem')
+context.use_certificate_chain_file('/etc/letsencrypt/live/messyplayground.com/fullchain.pem')
+context.use_certificate_file('/etc/letsencrypt/live/messyplayground.com/cert.pem')
 #########
 
 # Assuming the CSV file is in the same directory as your server script
@@ -118,5 +118,5 @@ def predict():
 
 if __name__ == '__main__':
     # app.run(debug=True)
-    app.run(host='0.0.0.0') # for server
-    # app.run(host='0.0.0.0', threaded=True, ssl_context=context) # for server
+    # app.run(host='0.0.0.0') # for server
+    app.run(host='0.0.0.0', threaded=True, ssl_context=context) # for server
