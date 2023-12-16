@@ -1,6 +1,7 @@
 <html>
     <head>
         <title>Group Assignment Project | COMP258 Group 3</title>
+        <meta content="width=device-width, initial-scale=1" name="viewport" />
         <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -71,15 +72,17 @@
             .two-side-container {
                 padding: 0px 40px 20px;
                 color: #FFFFFF;
+                flex: 50%;
+                font-size: 16px;
             }
 
             .left-container {
                 /* display: inline-block;
                 vertical-align: top; */
-                flex: 50%;
-                width: 50%;
+                /* flex: 50%; */
+                /* width: 50%; */
                 /* width: calc(50% - 1px); */
-                font-size: 16px;
+                /* font-size: 16px; */
                 /* border-right: 1px solid #FFFFFF; */
                 padding-right: 30px;
             }
@@ -87,9 +90,9 @@
             .right-container {
                 /* display: inline-block;
                 vertical-align: top; */
-                flex: 50%;
-                width: 50%;
-                font-size: 16px;
+                /* flex: 50%; */
+                /* width: 50%; */
+                /* font-size: 16px; */
                 padding-left: 30px;
             }
 
@@ -111,6 +114,7 @@
                 overflow: hidden;
                 color: #FFFFFF;
                 padding: 30px;
+                min-height: 200px;
             }
             
             body > .container > .main-container > div.two-side-container > div.card label, 
@@ -171,12 +175,44 @@
                 font-size: 28px;
                 font-weight: 900;
             }
+
+            @media only screen and (max-width: 1229px) {
+                .title-container {
+                    padding: 0px 15px;
+                }
+            }
+            @media only screen and (max-width: 1139px) {
+                .main-container {
+                    display: block;
+                }
+                .two-side-container {
+                    padding: 0px 15px 20px;
+                }
+                body > .container > .main-container > div.two-side-container > div.card {
+                    height: auto;
+                }
+            }
+            @media only screen and (max-width: 768px) {
+                .main-container {
+                    display: block;
+                }
+                .two-side-container {
+                    padding: 0px 15px 20px;
+                }
+                body > .container > .main-container > div.two-side-container > div.card {
+                    padding: 20px;
+                    height: auto;
+                }
+                .input-row {
+                    display: block;
+                }
+            }
         </style>
     </head>
     <body>
         <div class="header">
             <div class="header-container">
-                <div class="header_title">COMP358 Group 3</div>
+                <div class="header_title">COMP258 Group 3</div>
             </div>
         </div>
         <div class="container">
