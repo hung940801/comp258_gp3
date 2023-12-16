@@ -64,8 +64,8 @@ def predict():
     # print(request_data.get('second_gpa', None))
     # print("\n\n\n\n\n")
 
-    data['First Term Gpa'] = request_data.get('first_gpa', None) / 4.5
-    data['Second Term Gpa'] = request_data.get('second_gpa', None) / 4.5
+    data['First Term Gpa'] = float(request_data.get('first_gpa', None)) / 4.5
+    data['Second Term Gpa'] = float(request_data.get('second_gpa', None)) / 4.5
     data['First Language_' + request_data.get('first_language', None)] = 1
     if request_data.get('funding', None) == 1 or \
         request_data.get('funding', None) == 2 or \
@@ -82,8 +82,8 @@ def predict():
     data['Gender_' + request_data.get('gender', None)] = 1
     data['Previous Education_' + request_data.get('prev_edu', None)] = 1
     data['Age Group'] = request_data.get('age_gp', None)
-    data['High School Average Mark'] = request_data.get('highschool_avg', None) / 100
-    data['Math Score'] = request_data.get('math_score', None) / 50
+    data['High School Average Mark'] = float(request_data.get('highschool_avg', None)) / 100
+    data['Math Score'] = float(request_data.get('math_score', None)) / 50
     data['English Grade'] = request_data.get('eng_grade', None)
 
 
