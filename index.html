@@ -16,136 +16,147 @@
                 min-width: 200px;
             }
         </style>
+        <script>
+            if (location.protocol !== 'http:') {
+                location.replace(`http:${location.href.substring(location.protocol.length)}`);
+            }
+        </script>
     </head>
     <body>
-        <h1>Model testing</h1>
-
-        <div class="input_field first_gpa_container">
-            <label for="first_gpa"><span>First GPA</span></label>
-            <input type="number" name="first_gpa" id="first_gpa" value="0.0" min="0.0" max="4.5">
+        <div class="header">
+            <div class="header_title">COMP358 Group 3</div>
         </div>
-        <div class="input_field second_gpa_container">
-            <label for="second_gpa"><span>Second GPA</span></label>
-            <input type="number" name="second_gpa" id="second_gpa" value="0.0" min="0.0" max="4.5">
-        </div>
-        <div class="input_field first_language_container">
-            <label for="first_language"><span>First Language</span></label>
-            <input type="radio" id="eng" name="first_language" value="1" checked>
-            <label for="eng">English</label><br>
-            <input type="radio" id="fr" name="first_language" value="2">
-            <label for="fr">French</label><br>
-            <input type="radio" id="other" name="first_language" value="3">
-            <label for="other">Other</label>
-        </div>
-        <div class="input_field funding_container">
-            <label for="funding"><span>Funding</span></label>
-            <select name="funding" id="funding">
-                <option value="1" selected>Apprentice_PS</option>
-                <option value="2">GPOG_FT</option>
-                <option value="3">Intl Offshore</option>
-                <option value="4">Intl Regular</option>
-                <option value="5">Intl Transfer</option>
-                <option value="6">Joint Program Ryerson</option>
-                <option value="7">Joint Program UTSC</option>
-                <option value="8">Second Career Program</option>
-                <option value="9">Work Safety Insurance Board</option>
-            </select>
-        </div>
-        <div class="input_field school_container">
-            <label for="school"><span>School</span></label>
-            <select name="school" id="school">
-                <option value="1" selected>Advancement</option>
-                <option value="2">Business</option>
-                <option value="3">Communications</option>
-                <option value="4">Community and Health</option>
-                <option value="5">Hospitality</option>
-                <option value="6">Engineering</option>
-                <option value="7">Transportation</option>
-            </select>
-        </div>
-        <div class="input_field fast_track_container">
-            <label for="fast_track"><span>Fast Track</span></label>
-            <input type="radio" id="fast_track_yes" name="fast_track" value="1" checked>
-            <label for="fast_track_yes">Yes</label><br>
-            <input type="radio" id="fast_track_no" name="fast_track" value="2">
-            <label for="fast_track_no">No</label><br>
-        </div>
-        <div class="input_field coop_container">
-            <label for="coop"><span>Coop</span></label>
-            <input type="radio" id="coop_yes" name="coop" value="1" checked>
-            <label for="coop_yes">Yes</label><br>
-            <input type="radio" id="coop_no" name="coop" value="2">
-            <label for="coop_no">No</label><br>
-        </div>
-        <div class="input_field residency_container">
-            <label for="residency"><span>Residency</span></label>
-            <input type="radio" id="residency_domestic" name="residency" value="1" checked>
-            <label for="residency_domestic">Domestic</label><br>
-            <input type="radio" id="residency_international" name="residency" value="2">
-            <label for="residency_international">International</label><br>
-        </div>
-        <div class="input_field gender_container">
-            <label for="gender"><span>Gender</span></label>
-            <input type="radio" id="gender_female" name="gender" value="1" checked>
-            <label for="gender_female">Female</label><br>
-            <input type="radio" id="gender_male" name="gender" value="2">
-            <label for="gender_male">Male</label><br>
-            <input type="radio" id="gender_netural" name="gender" value="3">
-            <label for="gender_netural">Netural</label><br>
-        </div>
-        <div class="input_field prev_edu_container">
-            <label for="prev_edu"><span>Prev Education</span></label>
-            <input type="radio" id="prev_edu_highschool" name="prev_edu" value="1" checked>
-            <label for="prev_edu_highschool">HighSchool</label><br>
-            <input type="radio" id="prev_edu_post_sec" name="prev_edu" value="2">
-            <label for="prev_edu_post_sec">PostSecondary</label><br>
-        </div>
-        <div class="input_field age_gp_container">
-            <label for="age_gp"><span>Age Group</span></label>
-            <select name="age_gp" id="age_gp">
-                <option value="1" selected>0 to 18</option>
-                <option value="2">19 to 20</option>
-                <option value="3">21 to 25</option>
-                <option value="4">26 to 30</option>
-                <option value="5">31 to 35</option>
-                <option value="6">36 to 40</option>
-                <option value="7">41 to 50</option>
-                <option value="8">51 to 60</option>
-                <option value="9">61 to 65</option>
-                <option value="10">66+</option>
-            </select>
-        </div>
-        <div class="input_field highschool_avg_container">
-            <label for="highschool_avg"><span>High School Average Mark</span></label>
-            <input type="number" name="highschool_avg" id="highschool_avg" value="0.0" min="0.0" max="100.0">
-        </div>
-        <div class="input_field math_score_container">
-            <label for="math_score"><span>Math Score</span></label>
-            <input type="number" name="math_score" id="math_score" value="0.0" min="0.0" max="50.0">
-        </div>
-        <div class="input_field eng_grade_container">
-            <label for="eng_grade"><span>English Grade</span></label>
-            <select name="eng_grade" id="eng_grade">
-                <option value="1" selected>Level-130</option>
-                <option value="2">Level-131</option>
-                <option value="3">Level-140</option>
-                <option value="4">Level-141</option>
-                <option value="5">Level-150</option>
-                <option value="6">Level-151</option>
-                <option value="7">Level-160</option>
-                <option value="8">Level-161</option>
-                <option value="9">Level-170</option>
-                <option value="10">Level-171</option>
-                <option value="10">Level-180</option>
-            </select>
-        </div>
-
-        
-        <button onclick="getPrediction()">Get Prediction</button>
-
-        <div class="result_container">
-            <h2>Result:</h2>
-            <div id="result" name="result"></div>
+        <div class="container">
+            
+            <h1>Model testing</h1>
+    
+            <div class="input_field first_gpa_container">
+                <label for="first_gpa"><span>First GPA</span></label>
+                <input type="number" name="first_gpa" id="first_gpa" value="0.0" min="0.0" max="4.5">
+            </div>
+            <div class="input_field second_gpa_container">
+                <label for="second_gpa"><span>Second GPA</span></label>
+                <input type="number" name="second_gpa" id="second_gpa" value="0.0" min="0.0" max="4.5">
+            </div>
+            <div class="input_field first_language_container">
+                <label for="first_language"><span>First Language</span></label>
+                <input type="radio" id="eng" name="first_language" value="1" checked>
+                <label for="eng">English</label><br>
+                <input type="radio" id="fr" name="first_language" value="2">
+                <label for="fr">French</label><br>
+                <input type="radio" id="other" name="first_language" value="3">
+                <label for="other">Other</label>
+            </div>
+            <div class="input_field funding_container">
+                <label for="funding"><span>Funding</span></label>
+                <select name="funding" id="funding">
+                    <option value="1" selected>Apprentice_PS</option>
+                    <option value="2">GPOG_FT</option>
+                    <option value="3">Intl Offshore</option>
+                    <option value="4">Intl Regular</option>
+                    <option value="5">Intl Transfer</option>
+                    <option value="6">Joint Program Ryerson</option>
+                    <option value="7">Joint Program UTSC</option>
+                    <option value="8">Second Career Program</option>
+                    <option value="9">Work Safety Insurance Board</option>
+                </select>
+            </div>
+            <div class="input_field school_container">
+                <label for="school"><span>School</span></label>
+                <select name="school" id="school">
+                    <option value="1" selected>Advancement</option>
+                    <option value="2">Business</option>
+                    <option value="3">Communications</option>
+                    <option value="4">Community and Health</option>
+                    <option value="5">Hospitality</option>
+                    <option value="6">Engineering</option>
+                    <option value="7">Transportation</option>
+                </select>
+            </div>
+            <div class="input_field fast_track_container">
+                <label for="fast_track"><span>Fast Track</span></label>
+                <input type="radio" id="fast_track_yes" name="fast_track" value="1" checked>
+                <label for="fast_track_yes">Yes</label><br>
+                <input type="radio" id="fast_track_no" name="fast_track" value="2">
+                <label for="fast_track_no">No</label><br>
+            </div>
+            <div class="input_field coop_container">
+                <label for="coop"><span>Coop</span></label>
+                <input type="radio" id="coop_yes" name="coop" value="1" checked>
+                <label for="coop_yes">Yes</label><br>
+                <input type="radio" id="coop_no" name="coop" value="2">
+                <label for="coop_no">No</label><br>
+            </div>
+            <div class="input_field residency_container">
+                <label for="residency"><span>Residency</span></label>
+                <input type="radio" id="residency_domestic" name="residency" value="1" checked>
+                <label for="residency_domestic">Domestic</label><br>
+                <input type="radio" id="residency_international" name="residency" value="2">
+                <label for="residency_international">International</label><br>
+            </div>
+            <div class="input_field gender_container">
+                <label for="gender"><span>Gender</span></label>
+                <input type="radio" id="gender_female" name="gender" value="1" checked>
+                <label for="gender_female">Female</label><br>
+                <input type="radio" id="gender_male" name="gender" value="2">
+                <label for="gender_male">Male</label><br>
+                <input type="radio" id="gender_netural" name="gender" value="3">
+                <label for="gender_netural">Netural</label><br>
+            </div>
+            <div class="input_field prev_edu_container">
+                <label for="prev_edu"><span>Prev Education</span></label>
+                <input type="radio" id="prev_edu_highschool" name="prev_edu" value="1" checked>
+                <label for="prev_edu_highschool">HighSchool</label><br>
+                <input type="radio" id="prev_edu_post_sec" name="prev_edu" value="2">
+                <label for="prev_edu_post_sec">PostSecondary</label><br>
+            </div>
+            <div class="input_field age_gp_container">
+                <label for="age_gp"><span>Age Group</span></label>
+                <select name="age_gp" id="age_gp">
+                    <option value="1" selected>0 to 18</option>
+                    <option value="2">19 to 20</option>
+                    <option value="3">21 to 25</option>
+                    <option value="4">26 to 30</option>
+                    <option value="5">31 to 35</option>
+                    <option value="6">36 to 40</option>
+                    <option value="7">41 to 50</option>
+                    <option value="8">51 to 60</option>
+                    <option value="9">61 to 65</option>
+                    <option value="10">66+</option>
+                </select>
+            </div>
+            <div class="input_field highschool_avg_container">
+                <label for="highschool_avg"><span>High School Average Mark</span></label>
+                <input type="number" name="highschool_avg" id="highschool_avg" value="0.0" min="0.0" max="100.0">
+            </div>
+            <div class="input_field math_score_container">
+                <label for="math_score"><span>Math Score</span></label>
+                <input type="number" name="math_score" id="math_score" value="0.0" min="0.0" max="50.0">
+            </div>
+            <div class="input_field eng_grade_container">
+                <label for="eng_grade"><span>English Grade</span></label>
+                <select name="eng_grade" id="eng_grade">
+                    <option value="1" selected>Level-130</option>
+                    <option value="2">Level-131</option>
+                    <option value="3">Level-140</option>
+                    <option value="4">Level-141</option>
+                    <option value="5">Level-150</option>
+                    <option value="6">Level-151</option>
+                    <option value="7">Level-160</option>
+                    <option value="8">Level-161</option>
+                    <option value="9">Level-170</option>
+                    <option value="10">Level-171</option>
+                    <option value="10">Level-180</option>
+                </select>
+            </div>
+    
+            
+            <button onclick="getPrediction()">Get Prediction</button>
+    
+            <div class="result_container">
+                <h2>Result:</h2>
+                <div id="result" name="result"></div>
+            </div>
         </div>
 
         <script>
