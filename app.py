@@ -50,7 +50,7 @@ column_name = ['First Term Gpa',
     'Previous Education_1',
     'Previous Education_2']
 
-cat_map = {0: "0", 1: "1"}
+cat_map = {0: "Not Persistent", 1: "Persistent"}
 
 @app.route('/predict', methods=['POST'])
 def predict():
